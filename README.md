@@ -3,6 +3,10 @@
 This project demonstrates the use of the `RestorationMixin` in a Flutter application.
 The `RestorationMixin` allows the state of a widget to be restored when the app is restarted.
 
+## Documentation
+- [Flutter Documentation- State Restoration on android](https://docs.flutter.dev/platform-integration/android/restore-state-android)
+- [RestorationMixin](https://api.flutter.dev/flutter/widgets/RestorationMixin-mixin.html)
+
 ## Getting Started
 
 ### Prerequisites
