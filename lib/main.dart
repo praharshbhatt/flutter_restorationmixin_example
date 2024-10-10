@@ -69,19 +69,27 @@ class _RestorableCounterState extends State<RestorableCounter>
       appBar: AppBar(
         title: const Text('Restorable Counter'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '${_counter.value}',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: <Widget>[
+          TextFormField(
+            restorationId: 'counter_text',
+            controller: TextEditingController(text: _counter.value.toString()),
+            onChanged: (String value) {
+              setState(() {
+                _counter.value = int.tryParse(value) ?? 0;
+              });
+            },
+          ),
+          const SizedBox(height: 16),
+          const Text(
+            'You have pushed the button this many times:',
+          ),
+          Text(
+            '${_counter.value}',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

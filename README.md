@@ -14,6 +14,9 @@ The `RestorationMixin` allows the state of a widget to be restored when the app 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
 - [Dart SDK](https://dart.dev/get-dart)
 
+## Demo
+<img width="600" alt="Flutter RestorationMixin Demo" src="/demo/demo.gif">
+
 ### Installation
 
 1. **Clone the repository:**
